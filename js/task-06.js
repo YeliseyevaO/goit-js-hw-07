@@ -15,11 +15,12 @@ inputRef.addEventListener('input', onInputFocus);
 
 function onInputFocus(event) {
     
-    if (event.currentTarget.value.length < inputRef.dataset.length) {
-        inputRef.classList.add('invalid');
-        inputRef.classList.remove('valid');
-    } else {
+    if (event.currentTarget.value.length === inputRef.dataset.length) {
+          inputRef.classList.remove('invalid');
         inputRef.classList.add('valid');
-        inputRef.classList.remove('invalid')
+      
+    } else {
+        inputRef.classList.add('invalid');
+       inputRef.classList.remove('valid')
     }
 }

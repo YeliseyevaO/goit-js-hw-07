@@ -13,7 +13,7 @@ const refs = {
     span:document.querySelector('#text'),
 }
 
-refs.input.addEventListener('change', onRangeChange);
+refs.input.addEventListener('input', onRangeChange);
 function onRangeChange(event) {
   
        refs.span.style.fontSize = event.currentTarget.value + "px";
